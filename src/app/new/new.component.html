@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  UserName: <input type="text" [(ngModel)]="name" [pattern]="unamePattern" #uname="ngModel" >
+  <div *ngIf="uname.errors?.pattern" > 
+    Enter valid Name.
+</div> 
+  Password:<input type="password" [(ngModel)]="pass" >
+  
+ <button [disabled]='disable()'(click)='submit()' type="button" name="Submit">Submit</button>
+ <button (click)='Resdt()' type="button" name="reset">Reset</button>
+ </div>
+ <p [ngClass]="classSelect()">
+    UserName: {{username}}
+    Password: {{password}}
+ </p>
